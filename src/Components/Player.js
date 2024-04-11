@@ -74,7 +74,19 @@ const Player = () => {
                     </svg>
                 </button>
                 {data?.videoStreams !== undefined ? (
-                    <video id="musicVideo" muted={true} src={data?.videoStreams} className="w-full h-auto object-contain z-0" />
+                    <video
+                        id="musicVideo"
+                        muted={true}
+                        src={data?.videoStreams?.[0]}
+                        onError={(event) => {
+                            // set src to next stream
+                            let currentStream = event.currentTarget.src;
+                            let currentIndex = data?.videoStreams?.indexOf(currentStream) || 0;
+                            let nextStream = data?.videoStreams?.[currentIndex + 1];
+                            event.currentTarget.src = nextStream;
+                        }}
+                        className="w-full h-auto object-contain z-0"
+                    />
                 ) : (
                     <img
                         src={data?.thumbnail}
@@ -196,7 +208,14 @@ const Player = () => {
                             document.getElementById("musicVideo").pause();
                         }
                     }}
-                    src={data?.streams}
+                    src={data?.streams?.[0]}
+                    onError={(event) => {
+                        // set src to next stream
+                        let currentStream = event.currentTarget.src;
+                        let currentIndex = data?.streams?.indexOf(currentStream) || 0;
+                        let nextStream = data?.streams?.[currentIndex + 1];
+                        event.currentTarget.src = nextStream;
+                    }}
                     className="absolute bottom-[120%] right-96 w-64 h-20 hidden"
                     controls
                 ></audio>
