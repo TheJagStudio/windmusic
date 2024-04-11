@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
     return (
-        <div id="sidebar" className="flex flex-col gap-5 pt-5 px-2 fixed h-[calc(100vh-4.5rem)] w-20 border-r border-r-transparent transition-all duration-500">
+        <div id="sidebar" className="sm:flex flex-col hidden gap-5 pt-5 px-2 fixed h-[calc(100vh-4.5rem)] w-0 sm:w-20 border-r border-r-transparent transition-all duration-500">
             <button className={window.location.pathname === "/" ? "relative align-middle select-none font-sans font-medium text-center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-full h-fit py-2 rounded-lg text-sm bg-white/10 border border-white/20 backdrop-blur-md text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85]" : "relative align-middle select-none font-sans font-medium text-center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-full h-fit py-2 rounded-lg text-sm text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85]"} type="button">
                 <span className="flex flex-col gap-1 items-center justify-center">
                     <svg width="30" height="30" viewBox="0 0 24 24">

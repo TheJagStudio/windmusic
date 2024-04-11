@@ -15,9 +15,9 @@ const NavbarCus = () => {
                     <div className="flex items-center gap-4">
                         <Typography as="a" href="/" className="flex flex-nowrap gap-3 items-center justify-center mr-4 cursor-pointer py-1.5 font-bold text-2xl">
                             <img src="/images/logo.png" className="w-10 h-10" alt="songPoster" />
-                            Music
+                            <span className="hidden sm:block">Music</span>
                         </Typography>
-                        <div className="w-[30rem] px-4 h-fit bg-white/15 backdrop-blur-md group hover:bg-black border hover:border-b-0 border-white/20 rounded-lg hover:rounded-b-none relative transition-all duration-100">
+                        <div className="w-auto mr-5 sm:w-[30rem] px-4 h-fit bg-white/15 backdrop-blur-md group hover:bg-black border hover:border-b-0 border-white/20 rounded-lg hover:rounded-b-none relative transition-all duration-100">
                             <input
                                 value={searchQuery}
                                 onChange={(event) => {

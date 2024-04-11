@@ -46,6 +46,10 @@ const NormalSlider = ({ subTitle, title, data }) => {
                     spaceBetween={50}
                     slidesPerView={3}
                     breakpoints={{
+                        320: {
+                            slidesPerView: 2,
+                            spaceBetween: 10,
+                        },
                         640: {
                             slidesPerView: 3,
                             spaceBetween: 20,

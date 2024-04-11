@@ -45,7 +45,7 @@ const Playlist = () => {
         });
     }, []);
     return (
-        <div className="relative z-0 w-[calc(100%-5rem)] ml-20 p-5 px-20 mb-20">
+        <div className="relative z-0 w-full sm:w-[calc(100%-5rem)] ml-0 sm:ml-20 p-5 px-5 sm:px-20 mb-20">
             <div className="flex flex-nowrap gap-10 mt-5 text-white ">
                 <img src={data.thumbnail} className="w-64 h-64 rounded-lg object-cover" alt="" />
                 <div className="flex flex-nowrap gap-2 flex-col items-start justify-start">

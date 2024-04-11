@@ -88,7 +88,7 @@ const Home = () => {
         });
     }, []);
     return (
-        <div className="relative z-0 w-[calc(100%-5rem)] ml-20 p-5 px-20">
+        <div className="relative z-0 w-full sm:w-[calc(100%-5rem)] ml-0 sm:ml-20 p-5 px-5 sm:px-20">
             <div className="flex flex-nowrap gap-3 text-white overflow-x-scroll noScrollBar py-5 mb-5">
                 {data?.headers?.map((header, index) => {
                     return (

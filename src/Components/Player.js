@@ -58,11 +58,13 @@ const Player = () => {
     }, [play]);
     return (
         <div className="z-50 fixed bottom-0 left-0 bg-[#212121] h-20 w-full">
-            <div className="z-50 absolute group bottom-[calc(100%+2.5rem)] right-10 w-64 h-auto rounded-lg overflow-hidden flex flex-nowrap justify-center items-center bg-black transition-all">
+            <div className="z-50 absolute group bottom-[calc(100%+2.5rem)] right-10 w-32 sm:w-64 h-auto rounded-lg overflow-hidden flex flex-nowrap justify-center items-center bg-black transition-all">
                 <button
                     onClick={(event) => {
+                        event.currentTarget.parentElement.classList.toggle("sm:w-64");
+                        event.currentTarget.parentElement.classList.toggle("sm:w-96");
+                        event.currentTarget.parentElement.classList.toggle("w-32");
                         event.currentTarget.parentElement.classList.toggle("w-64");
-                        event.currentTarget.parentElement.classList.toggle("w-96");
                         document.getElementById("expandViwer").classList.toggle("hidden");
                         document.getElementById("minimseViwer").classList.toggle("hidden");
                     }}
