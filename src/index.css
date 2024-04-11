@@ -1,0 +1,108 @@
+@import url("https://fonts.gstatic.com/s/youtubesans/v23/Qw38ZQNGEDjaO2m6tqIqX5E-AVS5_rSejo46_PCTRspJ0OosolrBEJL3HO_T7fE.woff2");
+@import url("https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2");
+@import url("https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBBc4.woff2");
+@import url("https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBBc4.woff2");
+
+* {
+    font-family: YouTube Sans, Roboto, Noto Naskh Arabic UI, Arial, sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #181818;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #606060;
+}
+
+.noScrollBar::-webkit-scrollbar-track {
+    background: #ffffff00;
+}
+
+.noScrollBar::-webkit-scrollbar-thumb {
+    background: #ffffff00;
+}
+
+.noScrollBar:hover::-webkit-scrollbar-thumb {
+    background: #606060;
+}
+
+.truncate-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.truncate-4 {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.sliderVolume,
+.plyerSlider {
+    -webkit-appearance: none;
+    width: 100%;
+    background: transparent;
+    outline: none;
+    opacity: 1;
+}
+
+.sliderVolume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: white;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+.sliderVolume:hover::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 100%;
+    cursor: pointer;
+}
+.plyerSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #ff0000;
+    opacity: 0;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+.plyerSlider:hover::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    opacity: 1;
+    background: #ff0000;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.sliderVolume,
+.plyerSlider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: transparent;
+    cursor: pointer;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
