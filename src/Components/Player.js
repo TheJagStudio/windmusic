@@ -77,7 +77,7 @@ const Player = () => {
                     <video
                         id="musicVideo"
                         muted={true}
-                        src={data?.videoStreams?.[0]}
+                        src={process.env.REACT_APP_SERVER + "/content/" + data?.videoStreams?.[0]}
                         onError={(event) => {
                             // set src to next stream
                             let currentStream = event.currentTarget.src;
@@ -86,7 +86,7 @@ const Player = () => {
                                 console.log("Error: Stream not found");
                             } else {
                                 let nextStream = data?.videoStreams?.[currentIndex + 1];
-                                event.currentTarget.src = nextStream;
+                                event.currentTarget.src = process.env.REACT_APP_SERVER + "/content/" + nextStream;
                             }
                         }}
                         className="w-full h-auto object-contain z-0"
@@ -212,7 +212,7 @@ const Player = () => {
                             document.getElementById("musicVideo").pause();
                         }
                     }}
-                    src={data?.streams?.[0]}
+                    src={process.env.REACT_APP_SERVER + "/content/" + data?.streams?.[0]}
                     onError={(event) => {
                         // set src to next stream
                         let currentStream = event.currentTarget.src;
@@ -222,7 +222,7 @@ const Player = () => {
                             console.log("Error: Stream not found");
                         } else {
                             let nextStream = data?.streams?.[currentIndex + 1];
-                            event.currentTarget.src = nextStream;
+                            event.currentTarget.src = process.env.REACT_APP_SERVER + "/content/" + nextStream;
                         }
                     }}
                     className="absolute bottom-[120%] right-96 w-64 h-20 hidden"
