@@ -81,9 +81,13 @@ const Player = () => {
                         onError={(event) => {
                             // set src to next stream
                             let currentStream = event.currentTarget.src;
-                            let currentIndex = data?.videoStreams?.indexOf(currentStream) || 0;
-                            let nextStream = data?.videoStreams?.[currentIndex + 1];
-                            event.currentTarget.src = nextStream;
+                            let currentIndex = data?.videoStreams?.indexOf(currentStream) || -1;
+                            if (currentIndex === -1) {
+                                console.log("Error: Stream not found");
+                            } else {
+                                let nextStream = data?.videoStreams?.[currentIndex + 1];
+                                event.currentTarget.src = nextStream;
+                            }
                         }}
                         className="w-full h-auto object-contain z-0"
                     />
@@ -212,9 +216,14 @@ const Player = () => {
                     onError={(event) => {
                         // set src to next stream
                         let currentStream = event.currentTarget.src;
-                        let currentIndex = data?.streams?.indexOf(currentStream) || 0;
-                        let nextStream = data?.streams?.[currentIndex + 1];
-                        event.currentTarget.src = nextStream;
+                        let currentIndex = data?.streams?.indexOf(currentStream) || -1;
+
+                        if (currentIndex === -1) {
+                            console.log("Error: Stream not found");
+                        } else {
+                            let nextStream = data?.streams?.[currentIndex + 1];
+                            event.currentTarget.src = nextStream;
+                        }
                     }}
                     className="absolute bottom-[120%] right-96 w-64 h-20 hidden"
                     controls
