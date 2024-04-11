@@ -8,7 +8,7 @@ const Playlist = () => {
     const [data, setData] = useState({});
     const [videoId, setVideoId] = useAtom(CurrentVideoIDAtom);
     useEffect(() => {
-        fetch(`/api/playlist/${playlistId}`)
+        fetch(`${process.env.REACT_APP_SERVER}/api/playlist/${playlistId}`)
             .then((res) => res.json())
             .then((response) => {
                 setData(response);
