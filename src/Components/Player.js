@@ -81,7 +81,7 @@ const Player = () => {
                         onError={(event) => {
                             // set src to next stream
                             let currentStream = event.currentTarget.src;
-                            let currentIndex = data?.videoStreams?.indexOf(currentStream) || -1;
+                            let currentIndex = data?.videoStreams?.indexOf(currentStream);
                             if (currentIndex === -1) {
                                 console.log("Error: Stream not found");
                             } else {
@@ -216,7 +216,7 @@ const Player = () => {
                     onError={(event) => {
                         // set src to next stream
                         let currentStream = event.currentTarget.src;
-                        let currentIndex = data?.streams?.indexOf(currentStream) || -1;
+                        let currentIndex = data?.streams?.indexOf(currentStream);
 
                         if (currentIndex === -1) {
                             console.log("Error: Stream not found");
